@@ -745,8 +745,9 @@ button {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
 
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
+  padding: 40px;
 
   background-color: var(--primary-white-color);
   border-radius: 4px;
@@ -778,4 +779,30 @@ button {
 .close-icon {
   width: 100%;
   height: 100%;
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal .coment {
+  min-height: 120px;
 }
