@@ -369,22 +369,44 @@
             </button>
             <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
             <form action="">
-                <label for="">Ім'я
-                    <input type="text" class="modal-input" name="name" required>
+
+                <div class="input-group">
+                    <label class="input-label" for="name">Ім'я</label>
+                    <div class="input-wrap">
+                        <input type="text" class="modal-input" name="name" id="name" required>
+                        <svg class="input-icon" width="18" height="18">
+                            <use href="./images/icons.svg#person-black"></use>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="tel">Телефон</label>
+                    <div class="input-wrap">
+                        <input type="tel" class="modal-input" name="tel"  maxlength="13" id="tel" required>
+                        <svg class="input-icon" width="18" height="18">
+                            <use href="./images/icons.svg#phone-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="email">Пошта</label>
+                    <div class="input-wrap">
+                        <input type="email" class="modal-input" name="email" id="email" required>
+                        <svg class="input-icon" width="18" height="18">
+                            <use href="./images/icons.svg#mail-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <label class="input-label" for="comment">Коментар</label>
+                <textarea class="modal-input comment" name="comment" id="comment" placeholder="Введіть текст"></textarea>
+
+                <input type="checkbox" name="rules" id="rules">
+                <label for="rules">Погоджуюся з розсилкою та приймаю
+                    <a href="" class="rules">Умови договору</a>
                 </label>
-                <label for="">Телефон               
-                    <input type="tel" class="modal-input" name="phone"
-                    value="+380" 
-                    pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" 
-                    minlength="13" 
-                    maxlength="13">
-                </label>
-                <label for="">Пошта
-                    <input type="email" class="modal-input" name="email">
-                </label>
-                <label for="">Коментар
-                    <input type="text" class="modal-input coment" placeholder="Введіть текст">
-                </label>
+
                 <button type="submit">Відправити</button>
             </form>
         </div>
