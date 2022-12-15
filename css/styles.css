@@ -228,15 +228,7 @@ button {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-
-  /* transition: color var(--time-function), background-color var(--time-function); */
 }
-
-/* .button:hover,
-.button:focus {
-  color: var(--accent-color);
-  background-color: var(--primary-white-color);
-} */
 
 /* Section */
 .section-title {
@@ -757,6 +749,7 @@ button {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border-style: none;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -881,17 +874,9 @@ button {
   fill: var(--accent-color);
 }
 
-/* .input-group:hover .input-icon {
-  fill: var(--accent-color);
-} */
-
 .input-icon:hover {
   fill: var(--accent-color);
 }
-
-/* .input-icon:hover + .modal-input {
-  border: 1px solid var(--accent-color);
-} */
 
 .modal .comment {
   min-height: 120px;
