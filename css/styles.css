@@ -953,7 +953,7 @@ button {
 
 .politic-input:checked + label::before {
   border: none;
-  background-image: url(/images/icon-check.jpg);
+  background-image: url(../images/icon-check.jpg);
   background-size: contain;
   background-origin: border-box;
 }
