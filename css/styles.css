@@ -27,6 +27,7 @@
   --works-item-gap: 30px;
   --inactive-icon: #afb1b8;
   --secondary-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
   --time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --constant-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -217,6 +218,7 @@ button {
   padding: 10px 24px;
   text-align: center;
   min-width: 200px;
+  cursor: pointer;
 }
 
 .hero .button {
@@ -227,16 +229,14 @@ button {
   text-align: center;
   letter-spacing: 0.06em;
 
-  transition: color var(--time-function), background-color var(--time-function);
-
-  cursor: pointer;
+  /* transition: color var(--time-function), background-color var(--time-function); */
 }
 
-.button:hover,
+/* .button:hover,
 .button:focus {
   color: var(--accent-color);
   background-color: var(--primary-white-color);
-}
+} */
 
 /* Section */
 .section-title {
@@ -610,7 +610,7 @@ button {
 
 /* Footer */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-background-color);
 }
 
 .footer {
@@ -719,6 +719,61 @@ button {
   fill: var(--primary-white-color);
 }
 
+.footer-sub {
+  margin-left: 93px;
+  margin-top: 12px;
+}
+
+.sub-group {
+  margin-top: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  outline: none;
+
+  background-color: var(--footer-background-color);
+  color: var(--primary-white-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.sub-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+
+  cursor: pointer;
+}
+
+.sub-icon {
+  margin-left: 10px;
+  fill: var(--primary-white-color);
+}
+
 /* Modal window */
 .backdrop {
   position: fixed;
@@ -787,7 +842,6 @@ button {
   transition: fill var(--time-function);
 }
 
-
 .form-title {
   margin-top: 0;
   margin-bottom: 12px;
@@ -813,13 +867,31 @@ button {
   transition: border var(--time-function);
 }
 
-.modal-input:focus {
-  border: 1px solid #2196F3;
+.input-group:focus .modal-input,
+.input-group:hover .modal-input {
+  border: 1px solid var(--accent-color);
 }
 
-.modal-input:focus + svg {
+.modal-input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.modal-input:focus + svg,
+.modal-input:hover + svg {
   fill: var(--accent-color);
 }
+
+/* .input-group:hover .input-icon {
+  fill: var(--accent-color);
+} */
+
+.input-icon:hover {
+  fill: var(--accent-color);
+}
+
+/* .input-icon:hover + .modal-input {
+  border: 1px solid var(--accent-color);
+} */
 
 .modal .comment {
   min-height: 120px;
@@ -852,4 +924,66 @@ button {
   line-height: 14px;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
+}
+
+.politic-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.politic-label::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+  display: block;
+  margin-right: 8px;
+}
+
+.politic-input:checked + label::before {
+  border: none;
+  background-image: url(/images/icon-check.jpg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.politic-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.modal-send-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.policy-link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+  margin-left: 3px;
 }
